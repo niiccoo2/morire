@@ -1,45 +1,27 @@
-[gd_scene load_steps=12 format=3 uid="uid://8oedb6617m8i"]
+[gd_scene load_steps=8 format=3 uid="uid://8oedb6617m8i"]
 
 [ext_resource type="PackedScene" uid="uid://uljl4ixt7xvn" path="res://scenes/player.tscn" id="1_o5qli"]
-[ext_resource type="Texture2D" uid="uid://bcanq1em7fp18" path="res://art/curve_track.png" id="2_tefeu"]
-[ext_resource type="Texture2D" uid="uid://du0hs0e0arp7s" path="res://art/foward_track.png" id="3_o6xl0"]
-[ext_resource type="Texture2D" uid="uid://cspgnms8kvlte" path="res://art/left_turn.png" id="4_tipki"]
-[ext_resource type="Texture2D" uid="uid://vyb0avy5usga" path="res://art/right_turn.png" id="5_85g3d"]
+[ext_resource type="Texture2D" uid="uid://c3ixlq5umg4ng" path="res://art/stright.png" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://cdlg8txhxjk10" path="res://art/turn.png" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://dy57qtkkifp3w" path="res://scenes/player_2.tscn" id="5_tbgi4"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_choun"]
-texture = ExtResource("2_tefeu")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tefeu"]
+texture = ExtResource("2_jyhfs")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ya4ey"]
-texture = ExtResource("3_o6xl0")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eb6dy"]
-texture = ExtResource("4_tipki")
-0:0/0 = 0
-1:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_trceg"]
-texture = ExtResource("5_85g3d")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6xl0"]
+texture = ExtResource("3_tbgi4")
 0:0/0 = 0
 1:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_choun"]
-sources/6 = SubResource("TileSetAtlasSource_choun")
-sources/7 = SubResource("TileSetAtlasSource_ya4ey")
-sources/8 = SubResource("TileSetAtlasSource_eb6dy")
-sources/9 = SubResource("TileSetAtlasSource_trceg")
+sources/0 = SubResource("TileSetAtlasSource_tefeu")
+sources/1 = SubResource("TileSetAtlasSource_o6xl0")
 
 [node name="Main" type="Node2D"]
 
@@ -53,7 +35,10 @@ rotation = 0.0015977451
 scale = Vector2(2, 2)
 tile_set = SubResource("TileSet_choun")
 format = 2
-layer_0/tile_data = PackedInt32Array(-65536, 7, 1342177281, 0, 65543, 1342177281, -65534, 7, 1342177281, 2, 65543, 1342177281, -65535, 7, 1342177280, 1, 65543, 1342177280, -65532, 7, 1342177281, 4, 65543, 1342177281, -65533, 7, 1342177280, 3, 65543, 1342177280, -65530, 7, 1342177281, 6, 65543, 1342177281, -65531, 7, 1342177280, 5, 65543, 1342177280, -65528, 8, 1342177281, 8, 65544, 1342177281, -65529, 7, 1342177280, 7, 65543, 1342177280, -131065, 4, 0, -262137, 4, 0, -196601, 4, 1, -262136, 7, 1, -196600, 7, 0, -393209, 4, 0, -327673, 4, 1, -393208, 7, 1, -327672, 7, 0, -524281, 4, 0, -458745, 4, 1, -524280, 7, 1, -458744, 7, 0, -655353, 65540, 1610612737, -589817, 4, 1610612737, -655352, 65541, 0, -589816, 7, 0, -589818, 4, 1610612736, -655354, 65540, 1610612736, -589820, 4, 1610612736, -655356, 65540, 1610612736, -589819, 4, 1610612737, -655355, 65540, 1610612737, -589822, 4, 1610612736, -655358, 65540, 1610612736, -589821, 4, 1610612737, -655357, 65540, 1610612737, -589824, 4, 1610612736, -655360, 65540, 1610612736, -589823, 4, 1610612737, -655359, 65540, 1610612737, -524290, 7, 0, -589826, 65541, 1610612736, -524289, 65543, 0, -589825, 65541, 1610612737, -458754, 7, 1, -458753, 65543, 1, -393218, 7, 0, -327682, 7, 1, -393217, 65543, 0, -327681, 65543, 1, -262146, 7, 0, -196610, 7, 1, -262145, 65543, 0, -196609, 65543, 1, -131074, 7, 0, -65538, 7, 1, -131073, 65543, 0, -65537, 65543, 1, -65527, 8, 1342177280, 9, 65544, 1342177280, -327671, 65543, 0, -262135, 65543, 1, -131064, 7, 1, -196599, 65543, 0, -131063, 65543, 1, -458743, 65543, 0, -393207, 65543, 1, -589815, 65543, 0, -524279, 65543, 1, -196614, 7, 0, -131078, 7, 1, -196613, 65543, 0, -131077, 65543, 1, -327683, 7, 1342177280, -262147, 65543, 1342177280, -327684, 7, 1342177281, -262148, 65543, 1342177281, -327686, 9, 0, -262150, 9, 1, -327685, 65545, 0, -262149, 65545, 1)
+layer_0/tile_data = PackedInt32Array(-393209, 1, 0, -327673, 1, 1, -393208, 65537, 0, -327672, 65537, 1, -196601, 0, 1, -262137, 0, 0, -196600, 65536, 1, -262136, 65536, 0, -65531, 0, 1610612736, -131067, 65536, 1610612736, -65530, 0, 1610612737, -131066, 65536, 1610612737, -65533, 0, 1610612736, -131069, 65536, 1610612736, -65532, 0, 1610612737, -131068, 65536, 1610612737, -65535, 0, 1610612736, -131071, 65536, 1610612736, -65534, 0, 1610612737, -131070, 65536, 1610612737, -1, 0, 1610612736, -65537, 65536, 1610612736, -65536, 0, 1610612737, -131072, 65536, 1610612737, -327675, 0, 1610612736, -393211, 65536, 1610612736, -327674, 0, 1610612737, -393210, 65536, 1610612737, -327677, 0, 1610612736, -393213, 65536, 1610612736, -327676, 0, 1610612737, -393212, 65536, 1610612737, -327679, 0, 1610612736, -393215, 65536, 1610612736, -327678, 0, 1610612737, -393214, 65536, 1610612737, -262145, 0, 1610612736, -327681, 65536, 1610612736, -327680, 0, 1610612737, -393216, 65536, 1610612737, -131075, 65536, 805306368, -196611, 65536, 805306369, -131074, 0, 805306368, -196610, 0, 805306369, -262147, 1, 1610612736, -327683, 65537, 1610612736, -262146, 1, 1610612737, -327682, 65537, 1610612737, -3, 65537, 805306368, -65539, 65537, 805306369, -2, 1, 805306368, -65538, 1, 805306369, -65529, 65537, 1342177281, -131065, 1, 1342177281, -65528, 65537, 1342177280, -131064, 1, 1342177280)
 
 [node name="player2" parent="." instance=ExtResource("5_tbgi4")]
-position = Vector2(-2, -20)
+position = Vector2(187, -1)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(101, -33)

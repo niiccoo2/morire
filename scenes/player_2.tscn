@@ -18,7 +18,3 @@ texture = ExtResource("2_s551d")
 position = Vector2(-6, 0)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_oc1kf")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-4.808253e-07, -11)
-zoom = Vector2(2, 2)

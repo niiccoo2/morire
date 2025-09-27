@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d3o2sy3rolss8" path="res://scenes/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://8rwaul57fpnm" path="res://art/car2.png" id="2_g2els"]
-[ext_resource type="Script" uid="uid://cxhg4rvq54m0g" path="res://collision_shape_2d.gd" id="3_qhqgy"]
+[ext_resource type="Script" path="res://collision_shape_2d.gd" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 radius = 8.0
@@ -18,7 +18,3 @@ texture = ExtResource("2_g2els")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_qhqgy")
 script = ExtResource("3_qhqgy")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-4.808253e-07, -11)
-zoom = Vector2(2, 2)
