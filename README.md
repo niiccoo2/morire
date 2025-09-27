@@ -1,3 +1,3 @@
 # Cool driving game
 
-[https://superninjacat5.itch.io/morire](Try it out!)
+[Try it out!](https://superninjacat5.itch.io/morire)
