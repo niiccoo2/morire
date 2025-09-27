@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 var speed = 300
 var acceleration = 0.1
+signal collision(area)
+signal reset(area)
 
 func _ready():
 	print("Script ready on:", self.name)
@@ -23,20 +25,31 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+func reset_player():
+	# Move back to spawn (pick your own position)
+	global_position = Vector2(-4.0, -47.0)  
 
-#
-#extends CharacterBody2D
-#
-#var speed = 200
-#var acceleration = 0.1
-#
-#func _physics_process(delta: float) -> void:
-	#var input_vector = Vector2.ZERO
-	#input_vector.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	#input_vector.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-	#input_vector = input_vector.normalized()
-	#
-	#velocity = velocity.lerp(input_vector * speed, acceleration)
-	#move_and_slide()
-	#rotation = global_position.angle_to_point(get_global_mouse_position()) + deg_to_rad(90)
-#
+	# Stop motion
+	velocity = Vector2.ZERO  
+
+	# Reset other things if needed
+	rotation = 90
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("Starting...")
+	await get_tree().create_timer(0.5).timeout
+	print("After 0.5 seconds!")
+	collision.emit(area)
+
+
+
+func _on_player2_collision(area: Variant) -> void:
+	
+	speed += 100
+	reset.emit(area)
+	
+
+
+func _on_player2_reset(area: Variant) -> void:
+	reset_player()
