@@ -17,7 +17,7 @@ func _physics_process(delta: float) -> void:
 		print(input_vector)
 
 		velocity = velocity.lerp(input_vector * speed, acceleration)
-		rotation = velocity.angle() + deg_to_rad(90)
+		rotation = velocity.angle()
 	else:
 		velocity *= 0.86
 	
