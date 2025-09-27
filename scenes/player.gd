@@ -11,16 +11,16 @@ func _ready():
 	print("Has move_down:", InputMap.has_action("drive_down"))
 	
 func _physics_process(delta: float) -> void:
-	
-	if Input.is_action_pressed("drive"):
-		
+	var dir = Input.get_vector("drive_left", "drive_right", "drive_up", "drive_down")
+	if dir != Vector2.ZERO:
 		var input_vector = Input.get_vector("drive_left", "drive_right", "drive_up", "drive_down")
 		print(input_vector)
 
 		velocity = velocity.lerp(input_vector * speed, acceleration)
-		rotation = global_position.angle_to_point(input_vector) + deg_to_rad(90)
+		rotation = velocity.angle() + deg_to_rad(90)
 	else:
-		velocity *= 0.75
+		velocity *= 0.86
+	
 	move_and_slide()
 	
 

@@ -6,7 +6,8 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qhqgy"]
 radius = 8.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player1" type="CharacterBody2D"]
+position = Vector2(-11, 0)
 rotation = 1.5707964
 script = ExtResource("1_3vyb7")
 
@@ -17,4 +18,5 @@ texture = ExtResource("2_g2els")
 shape = SubResource("CapsuleShape2D_qhqgy")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-4.808253e-07, -11)
 zoom = Vector2(2, 2)
