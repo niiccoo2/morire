@@ -1,0 +1,44 @@
+[gd_scene load_steps=9 format=3 uid="uid://8oedb6617m8i"]
+
+[ext_resource type="PackedScene" uid="uid://uljl4ixt7xvn" path="res://scenes/player.tscn" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://ptwe4blmkc3j" path="res://art/rg_track.png" id="2_jyhfs"]
+[ext_resource type="Texture2D" uid="uid://be20fn5a2wclt" path="res://art/fw_track.png" id="3_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://bfw15g3gqoiti" path="res://art/lf_track.png" id="4_tefeu"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_o6xl0"]
+texture = ExtResource("2_jyhfs")
+0:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tipki"]
+texture = ExtResource("3_tbgi4")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_85g3d"]
+texture = ExtResource("4_tefeu")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_choun"]
+sources/3 = SubResource("TileSetAtlasSource_o6xl0")
+sources/4 = SubResource("TileSetAtlasSource_tipki")
+sources/5 = SubResource("TileSetAtlasSource_85g3d")
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_o5qli")]
+z_index = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+z_index = -1
+rotation = 0.0015977451
+scale = Vector2(2, 2)
+tile_set = SubResource("TileSet_choun")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 4, 1342177280, 0, 65540, 1342177280, -1, 5, 805306369, 65535, 5, 805306368, -65534, 4, 1342177280, 2, 65540, 1342177280, -65535, 4, 1342177281, 1, 65540, 1342177281, -65532, 4, 1342177280, 4, 65540, 1342177280, -65533, 4, 1342177281, 3, 65540, 1342177281, -65530, 4, 1342177280, 6, 65540, 1342177280, -65531, 4, 1342177281, 5, 65540, 1342177281, -65528, 65540, 1, 8, 65541, 1342177280, -65529, 4, 1, 7, 65541, 1342177281, -131065, 4, 0, -131064, 65540, 0, -262137, 4, 0, -196601, 4, 1, -262136, 65540, 0, -196600, 65540, 1, -393209, 4, 0, -327673, 4, 1, -393208, 65540, 0, -327672, 65540, 1, -524281, 4, 0, -458745, 4, 1, -524280, 65540, 0, -458744, 65540, 1, -655353, 65540, 1610612737, -589817, 4, 1610612737, -655352, 65541, 0, -589816, 65541, 1, -589818, 4, 1610612736, -655354, 65540, 1610612736, -589820, 4, 1610612736, -655356, 65540, 1610612736, -589819, 4, 1610612737, -655355, 65540, 1610612737, -589822, 4, 1610612736, -655358, 65540, 1610612736, -589821, 4, 1610612737, -655357, 65540, 1610612737, -589824, 4, 1610612736, -655360, 65540, 1610612736, -589823, 4, 1610612737, -655359, 65540, 1610612737, -524290, 4, 0, -589826, 65541, 1610612736, -524289, 65540, 0, -589825, 65541, 1610612737, -458754, 4, 1, -458753, 65540, 1, -393218, 4, 0, -327682, 4, 1, -393217, 65540, 0, -327681, 65540, 1, -262146, 4, 0, -196610, 4, 1, -262145, 65540, 0, -196609, 65540, 1, -131074, 4, 0, -65538, 4, 1, -131073, 65540, 0, -65537, 65540, 1, -2, 65541, 805306369, 65534, 65541, 805306368)
