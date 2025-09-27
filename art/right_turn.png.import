@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfw15g3gqoiti"
-path="res://.godot/imported/lf_track.png-90ee0ab8a2293af0605794cc2c89f879.ctex"
+uid="uid://vyb0avy5usga"
+path="res://.godot/imported/right_turn.png-a9ab7284e8c9f1f9662c9db11adb19ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/lf_track.png"
-dest_files=["res://.godot/imported/lf_track.png-90ee0ab8a2293af0605794cc2c89f879.ctex"]
+source_file="res://art/right_turn.png"
+dest_files=["res://.godot/imported/right_turn.png-a9ab7284e8c9f1f9662c9db11adb19ca.ctex"]
 
 [params]
 

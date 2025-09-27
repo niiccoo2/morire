@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be20fn5a2wclt"
-path="res://.godot/imported/fw_track.png-b84fa9db70b9d375895ed6ea5ad49aa1.ctex"
+uid="uid://du0hs0e0arp7s"
+path="res://.godot/imported/foward_track.png-0b4d8c0c5c02ac628170bd7ff6956411.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/fw_track.png"
-dest_files=["res://.godot/imported/fw_track.png-b84fa9db70b9d375895ed6ea5ad49aa1.ctex"]
+source_file="res://art/foward_track.png"
+dest_files=["res://.godot/imported/foward_track.png-0b4d8c0c5c02ac628170bd7ff6956411.ctex"]
 
 [params]
 
